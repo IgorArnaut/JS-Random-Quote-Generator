@@ -8,12 +8,10 @@ const img = document.getElementsByTagName("img")[0];
 function setQuote() {
   const quotePerson = getQuotePerson();
   img.src = quotePerson.imgUrl;
-  text.innerText = quotePerson["text"];
-  person.innerText = quotePerson["person"];
+  text.innerText = quotePerson.text;
+  person.innerText = quotePerson.person;
 }
 
 setQuote();
 
-window.addEventListener("load", () => {
-  button.addEventListener("click", () => setQuote());
-});
+window.addEventListener("load", () => button.addEventListener("click", () => setQuote()));
